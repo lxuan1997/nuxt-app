@@ -1,0 +1,5 @@
+.nuxt
+.node
+output
+dist
+.DS_Store
