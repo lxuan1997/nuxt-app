@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@sidebase/nuxt-auth'],
   auth: {
-    originEnvKey: 'AUTH_ORIGIN',
+    baseURL: process.env.AUTH_ORIGIN,
+    // originEnvKey: 'AUTH_ORIGIN',
     provider: {
       type: 'authjs'
     }
