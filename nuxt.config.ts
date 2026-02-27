@@ -4,13 +4,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@sidebase/nuxt-auth'],
   auth: {
-    baseURL: '/api/auth',
     provider: {
       type: 'authjs'
     }
   },
   runtimeConfig: {
+    // 服务端-only 的密钥
     githubClientSecret: process.env.GITHUB_CLIENT_SECRET,
+    // 暴露给客户端的公钥
     public: {
       githubClientId: process.env.GITHUB_CLIENT_ID
     }
